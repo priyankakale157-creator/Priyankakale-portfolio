@@ -5,14 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Priyanka Kale | Portfolio</title>
     <link rel="icon" type="image/png" href="images/favicon.png" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://priyankakale157-creator.github.io/Priyankakale-portfolio/styles.css" />
   </head>
   <body>
@@ -20,36 +14,17 @@
     <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand" href="#">PK</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto align-items-center">
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             <li class="nav-item ms-3">
-              <button
-                id="theme-toggle"
-                onclick="toggleMode()"
-                title="Toggle dark mode"
-              >
-                🌙
-              </button>
+              <button id="theme-toggle" onclick="toggleMode()" title="Toggle dark mode">🌙</button>
             </li>
           </ul>
         </div>
@@ -66,9 +41,7 @@
       <div class="container text-center hero-content">
         <p class="hero-eyebrow">Welcome to my portfolio</p>
         <h1 class="hero-title">Priyanka Kale</h1>
-        <h2 class="hero-sub">
-          <span id="typing"></span><span class="cursor">|</span>
-        </h2>
+        <h2 class="hero-sub"><span id="typing"></span><span class="cursor">|</span></h2>
         <div class="hero-cta mt-5">
           <a href="#projects" class="btn-primary-custom me-3">View My Work</a>
           <a href="#contact" class="btn-outline-custom">Get in Touch</a>
@@ -109,11 +82,19 @@
               <strong>Software Developer</strong> where I can grow, collaborate,
               and make an impact.
             </p>
+
             <div class="about-tags mt-3">
               <span class="tag">Web Development</span>
               <span class="tag">Python</span>
               <span class="tag">SQL</span>
               <span class="tag">AI/ML</span>
+            </div>
+
+            <!-- Resume Button -->
+            <div class="mt-4">
+              <a href="resume.pdf" download class="btn-primary-custom">
+                Download Resume 📄
+              </a>
             </div>
           </div>
         </div>
@@ -128,73 +109,38 @@
         <div class="row gy-4">
           <div class="col-md-6">
             <div class="skill-item">
-              <div class="skill-header">
-                <span class="skill-name">HTML & CSS</span>
-                <span class="skill-pct">90%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="90" style="width: 0%"></div>
-              </div>
+              <div class="skill-header"><span class="skill-name">HTML & CSS</span><span class="skill-pct">90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="90" style="width: 0%"></div></div>
             </div>
           </div>
-
           <div class="col-md-6">
             <div class="skill-item">
-              <div class="skill-header">
-                <span class="skill-name">Python</span>
-                <span class="skill-pct">85%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="85" style="width: 0%"></div>
-              </div>
+              <div class="skill-header"><span class="skill-name">Python</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85" style="width: 0%"></div></div>
             </div>
           </div>
-
           <div class="col-md-6">
             <div class="skill-item">
-              <div class="skill-header">
-                <span class="skill-name">JavaScript</span>
-                <span class="skill-pct">75%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="75" style="width: 0%"></div>
-              </div>
+              <div class="skill-header"><span class="skill-name">JavaScript</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75" style="width: 0%"></div></div>
             </div>
           </div>
-
           <div class="col-md-6">
             <div class="skill-item">
-              <div class="skill-header">
-                <span class="skill-name">SQL & Databases</span>
-                <span class="skill-pct">80%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="80" style="width: 0%"></div>
-              </div>
+              <div class="skill-header"><span class="skill-name">SQL & Databases</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80" style="width: 0%"></div></div>
             </div>
           </div>
-
           <div class="col-md-6">
             <div class="skill-item">
-              <div class="skill-header">
-                <span class="skill-name">Bootstrap / Responsive Design</span>
-                <span class="skill-pct">85%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="85" style="width: 0%"></div>
-              </div>
+              <div class="skill-header"><span class="skill-name">Bootstrap / Responsive Design</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85" style="width: 0%"></div></div>
             </div>
           </div>
-
           <div class="col-md-6">
             <div class="skill-item">
-              <div class="skill-header">
-                <span class="skill-name">AI / Machine Learning</span>
-                <span class="skill-pct">70%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="70" style="width: 0%"></div>
-              </div>
+              <div class="skill-header"><span class="skill-name">AI / Machine Learning</span><span class="skill-pct">70%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="70" style="width: 0%"></div></div>
             </div>
           </div>
         </div>
@@ -258,62 +204,10 @@
         <div class="section-label">04 — Contact</div>
         <h2 class="section-title text-center mb-2">Let's Connect</h2>
         <p class="text-center mb-5 contact-sub">
-          Have an opportunity or want to collaborate? Drop me a message!
+          Feel free to reach out to me via email for opportunities or collaboration.
         </p>
-
-        <div class="row justify-content-center">
-          <div class="col-md-7">
-            <form id="contactForm" novalidate>
-              <div class="mb-4">
-                <input
-                  type="text"
-                  id="name"
-                  class="form-field"
-                  placeholder="Your Name"
-                  required
-                />
-                <div class="field-error" id="nameError">
-                  Please enter your name.
-                </div>
-              </div>
-              <div class="mb-4">
-                <input
-                  type="email"
-                  id="email"
-                  class="form-field"
-                  placeholder="Your Email"
-                  required
-                />
-                <div class="field-error" id="emailError">
-                  Please enter a valid email.
-                </div>
-              </div>
-              <div class="mb-4">
-                <textarea
-                  id="message"
-                  class="form-field"
-                  rows="5"
-                  placeholder="Your Message"
-                  required
-                ></textarea>
-                <div class="field-error" id="messageError">
-                  Please enter a message.
-                </div>
-              </div>
-              <div class="text-center">
-                <button type="submit" class="btn-primary-custom">
-                  Send Message ✉️
-                </button>
-              </div>
-              <div
-                id="formSuccess"
-                class="success-msg mt-4 text-center"
-                style="display: none"
-              >
-                🎉 Thanks! Your message has been sent.
-              </div>
-            </form>
-          </div>
+        <div class="text-center">
+          <a href="mailto:your-email@example.com" class="btn-primary-custom">Email Me ✉️</a>
         </div>
       </div>
     </section>
@@ -326,7 +220,7 @@
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://priyankakale157-creator.github.io/Priyankakale-portfolio/script.js"></script>
+    
+    <script src="script.js"></script>
   </body>
 </html>
