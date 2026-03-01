@@ -1,226 +1,306 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Priyanka Kale | Portfolio</title>
-    <link rel="icon" type="image/png" href="images/favicon.png" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://priyankakale157-creator.github.io/Priyankakale-portfolio/styles.css" />
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand" href="#">PK</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto align-items-center">
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            <li class="nav-item ms-3">
-              <button id="theme-toggle" onclick="toggleMode()" title="Toggle dark mode">🌙</button>
-            </li>
-          </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Priyanka Kale — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito:wght@300;400;500;600;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <span class="nav-brand">Priyanka Kale</span>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#internships">Experience</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li style="margin-left:8px;"><button id="theme-btn">&#9790;</button></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+    <div class="hero-inner">
+      <div>
+        <span class="hero-label">Hey there, welcome</span>
+        <h1 class="hero-name">Priyanka<br><span>Kale</span></h1>
+        <p class="hero-role">Software Developer &nbsp;&middot;&nbsp; Web Engineer &nbsp;&middot;&nbsp; AI Explorer</p>
+        <p class="hero-desc">Final-year CS student who loves building things that are clean, functional, and actually enjoyable to use. From AI-powered tools to responsive web apps.</p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn-filled">See My Work</a>
+          <a href="Resume.pdf" download class="btn-outline">Download Resume</a>
+        </div>
+        <div class="stats-strip" style="opacity:0;animation:fadeUp 0.7s 1s forwards;">
+          <div class="stat-pill"><div class="num">3+</div><div class="lbl">Projects</div></div>
+          <div class="stat-pill"><div class="num">2+</div><div class="lbl">Internships</div></div>
+          <div class="stat-pill"><div class="num">5+</div><div class="lbl">Languages</div></div>
+          <div class="stat-pill"><div class="num">68%</div><div class="lbl">CGPA</div></div>
         </div>
       </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero d-flex align-items-center" id="hero">
-      <div class="hero-bg-shapes">
-        <span class="shape shape-1"></span>
-        <span class="shape shape-2"></span>
-        <span class="shape shape-3"></span>
-      </div>
-      <div class="container text-center hero-content">
-        <p class="hero-eyebrow">Welcome to my portfolio</p>
-        <h1 class="hero-title">Priyanka Kale</h1>
-        <h2 class="hero-sub"><span id="typing"></span><span class="cursor">|</span></h2>
-        <div class="hero-cta mt-5">
-          <a href="#projects" class="btn-primary-custom me-3">View My Work</a>
-          <a href="#contact" class="btn-outline-custom">Get in Touch</a>
+      <div class="hero-avatar-wrap">
+        <div class="avatar-ring">
+          <img src="https://priyankakale157-creator.github.io/Priyankakale-portfolio/priya.png"
+               alt="Priyanka Kale" class="avatar-img"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+          <span class="avatar-initials-hero" style="display:none;position:absolute;">PK</span>
         </div>
       </div>
-      <a href="#about" class="scroll-hint">↓</a>
-    </section>
+    </div>
+  </section>
 
-    <!-- About -->
-    <section id="about" class="section-pad">
-      <div class="container">
-        <div class="section-label">01 — About</div>
-        <div class="row align-items-center gy-5">
-          <div class="col-md-5 text-center">
-            <div class="profile-wrap">
-              <img
-                src="https://priyankakale157-creator.github.io/Priyankakale-portfolio/priya.png"
-                alt="Priyanka Kale"
-                class="profile-img"
-                onerror="
-                  this.style.display = 'none';
-                  this.nextElementSibling.style.display = 'flex';
-                "
-              />
-              <div class="profile-placeholder">PK</div>
-            </div>
+  <!-- About -->
+  <section id="about" class="section-alt">
+    <div class="container">
+      <div class="sec-chip">01 &mdash; About me</div>
+      <h2 class="sec-title">The person <em>behind the code</em></h2>
+      <div class="about-wrap">
+        <div class="reveal">
+          <div class="about-text">
+            <p>I'm a <strong>final-year Computer Science student</strong> at MGICOET, Shegaon, building my way through web development, Python, and AI. I like problems that require both logic and creativity to solve.</p>
+            <p>I enjoy turning rough requirements into polished, working products. Whether it is a face-recognition system or a clean, responsive web interface, I care about the details that make the end result feel right.</p>
+            <p>Right now I am actively looking for <strong>software developer roles</strong> where I can grow, collaborate with a good team, and ship meaningful work.</p>
           </div>
-          <div class="col-md-7">
-            <h2 class="section-title">Hi, I'm Priyanka 👋</h2>
-            <p class="about-text">
-              I'm a <strong>Final Year CS Student</strong> passionate about
-              building elegant, functional web applications and exploring
-              Python-powered solutions. I love turning complex problems into
-              clean, user-friendly experiences.
-            </p>
-            <p class="about-text">
-              Currently seeking opportunities as a
-              <strong>Software Developer</strong> where I can grow, collaborate,
-              and make an impact.
-            </p>
-
-            <div class="about-tags mt-3">
-              <span class="tag">Web Development</span>
-              <span class="tag">Python</span>
-              <span class="tag">SQL</span>
-              <span class="tag">AI/ML</span>
-            </div>
-
-            <!-- Resume Button -->
-            <div class="mt-4">
-              <a href="https://priyankakale157-creator.github.io/Priyankakale-portfolio/Resume.pdf" download class="btn-primary-custom">
-                Download Resume 📄
-              </a>
-            </div>
+          <div class="tags-cloud">
+            <span class="c-tag">Web Development</span>
+            <span class="c-tag">Python</span>
+            <span class="c-tag">SQL</span>
+            <span class="c-tag">AI / ML</span>
+            <span class="c-tag">OpenCV</span>
+            <span class="c-tag">NLP</span>
+            <span class="c-tag">Java</span>
+            <span class="c-tag">Bootstrap</span>
           </div>
+          <a href="Resume.pdf" download class="btn-filled">Download Resume</a>
         </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="section-pad section-alt">
-      <div class="container">
-        <div class="section-label">02 — Skills</div>
-        <h2 class="section-title text-center mb-5">What I Work With</h2>
-        <div class="row gy-4">
-          <div class="col-md-6">
-            <div class="skill-item">
-              <div class="skill-header"><span class="skill-name">HTML & CSS</span><span class="skill-pct">90%</span></div>
-              <div class="skill-bar"><div class="skill-fill" data-width="90" style="width: 0%"></div></div>
-            </div>
+        <div class="reveal d2">
+          <h3 style="font-family:'Lora',serif;font-size:1.2rem;font-weight:600;margin-bottom:20px;">Education</h3>
+          <div class="edu-card">
+            <div class="edu-deg">B.E. Computer Science &amp; Engineering</div>
+            <div class="edu-school">MGICOET, Shegaon &nbsp;&middot;&nbsp; 2026</div>
+            <div class="edu-grade">68.42%</div>
           </div>
-          <div class="col-md-6">
-            <div class="skill-item">
-              <div class="skill-header"><span class="skill-name">Python</span><span class="skill-pct">85%</span></div>
-              <div class="skill-bar"><div class="skill-fill" data-width="85" style="width: 0%"></div></div>
-            </div>
+          <div class="edu-card">
+            <div class="edu-deg">Class XII &mdash; Science</div>
+            <div class="edu-school">Vidya Niketan English School &amp; Jr College, Digras &nbsp;&middot;&nbsp; 2022</div>
+            <div class="edu-grade">84.83%</div>
           </div>
-          <div class="col-md-6">
-            <div class="skill-item">
-              <div class="skill-header"><span class="skill-name">JavaScript</span><span class="skill-pct">75%</span></div>
-              <div class="skill-bar"><div class="skill-fill" data-width="75" style="width: 0%"></div></div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="skill-item">
-              <div class="skill-header"><span class="skill-name">SQL & Databases</span><span class="skill-pct">80%</span></div>
-              <div class="skill-bar"><div class="skill-fill" data-width="80" style="width: 0%"></div></div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="skill-item">
-              <div class="skill-header"><span class="skill-name">Bootstrap / Responsive Design</span><span class="skill-pct">85%</span></div>
-              <div class="skill-bar"><div class="skill-fill" data-width="85" style="width: 0%"></div></div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="skill-item">
-              <div class="skill-header"><span class="skill-name">AI / Machine Learning</span><span class="skill-pct">70%</span></div>
-              <div class="skill-bar"><div class="skill-fill" data-width="70" style="width: 0%"></div></div>
-            </div>
+          <div class="edu-card">
+            <div class="edu-deg">Class X</div>
+            <div class="edu-school">Mohanabai Girls High School, Digras &nbsp;&middot;&nbsp; 2020</div>
+            <div class="edu-grade">80.20%</div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Projects -->
-    <section id="projects" class="section-pad">
-      <div class="container">
-        <div class="section-label">03 — Projects</div>
-        <h2 class="section-title text-center mb-5">My Work</h2>
-        <div class="row gy-4">
-          <div class="col-md-4">
-            <div class="project-card">
-              <div class="project-icon">🤖</div>
-              <h5 class="project-title">Resume Screening System</h5>
-              <p class="project-desc">
-                AI-based resume shortlisting using Python and NLP to automate
-                the hiring process.
-              </p>
-              <div class="project-tags">
-                <span>Python</span><span>NLP</span><span>AI</span>
-              </div>
-            </div>
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <div class="sec-chip">02 &mdash; Skills</div>
+      <h2 class="sec-title">What I <em>work with</em></h2>
+      <div class="skills-grid reveal">
+        <div class="sk-item">
+          <div class="sk-head"><span class="sk-name">HTML &amp; CSS</span><span class="sk-pct">90%</span></div>
+          <div class="sk-track"><div class="sk-fill" data-width="90"></div></div>
+        </div>
+        <div class="sk-item">
+          <div class="sk-head"><span class="sk-name">Python</span><span class="sk-pct">85%</span></div>
+          <div class="sk-track"><div class="sk-fill" data-width="85"></div></div>
+        </div>
+        <div class="sk-item">
+          <div class="sk-head"><span class="sk-name">JavaScript</span><span class="sk-pct">75%</span></div>
+          <div class="sk-track"><div class="sk-fill" data-width="75"></div></div>
+        </div>
+        <div class="sk-item">
+          <div class="sk-head"><span class="sk-name">SQL &amp; Databases</span><span class="sk-pct">80%</span></div>
+          <div class="sk-track"><div class="sk-fill" data-width="80"></div></div>
+        </div>
+        <div class="sk-item">
+          <div class="sk-head"><span class="sk-name">Bootstrap &amp; Responsive Design</span><span class="sk-pct">85%</span></div>
+          <div class="sk-track"><div class="sk-fill" data-width="85"></div></div>
+        </div>
+        <div class="sk-item">
+          <div class="sk-head"><span class="sk-name">AI / Machine Learning</span><span class="sk-pct">70%</span></div>
+          <div class="sk-track"><div class="sk-fill" data-width="70"></div></div>
+        </div>
+        <div class="sk-item">
+          <div class="sk-head"><span class="sk-name">C / C++</span><span class="sk-pct">78%</span></div>
+          <div class="sk-track"><div class="sk-fill" data-width="78"></div></div>
+        </div>
+        <div class="sk-item">
+          <div class="sk-head"><span class="sk-name">Java</span><span class="sk-pct">72%</span></div>
+          <div class="sk-track"><div class="sk-fill" data-width="72"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section-alt">
+    <div class="container">
+      <div class="sec-chip">03 &mdash; Projects</div>
+      <h2 class="sec-title">Things I've <em>built</em></h2>
+      <div class="projects-grid">
+        <div class="proj-card reveal">
+          <div class="proj-num">Project 01</div>
+          <h3 class="proj-title">Resume Screening System</h3>
+          <p class="proj-desc">AI-powered resume shortlisting using Python and NLP. Parses and ranks candidate profiles against job descriptions to automate hiring workflows.</p>
+          <div class="proj-tags">
+            <span class="p-tag">Python</span>
+            <span class="p-tag">NLP</span>
+            <span class="p-tag">AI</span>
           </div>
-
-          <div class="col-md-4">
-            <div class="project-card">
-              <div class="project-icon">📷</div>
-              <h5 class="project-title">Smart Attendance</h5>
-              <p class="project-desc">
-                Face recognition-based attendance system using OpenCV for
-                real-time tracking.
-              </p>
-              <div class="project-tags">
-                <span>Python</span><span>OpenCV</span><span>ML</span>
-              </div>
-            </div>
+        </div>
+        <div class="proj-card reveal d1">
+          <div class="proj-num">Project 02</div>
+          <h3 class="proj-title">Smart Attendance System</h3>
+          <p class="proj-desc">Real-time face recognition attendance tracker using OpenCV and ML. Eliminates manual roll calls with automated, accurate records.</p>
+          <div class="proj-tags">
+            <span class="p-tag">Python</span>
+            <span class="p-tag">OpenCV</span>
+            <span class="p-tag">ML</span>
           </div>
-
-          <div class="col-md-4">
-            <div class="project-card">
-              <div class="project-icon">💼</div>
-              <h5 class="project-title">Employee Management</h5>
-              <p class="project-desc">
-                SQL-based employee database system with CRUD operations and
-                reporting.
-              </p>
-              <div class="project-tags">
-                <span>SQL</span><span>Python</span><span>DBMS</span>
-              </div>
-            </div>
+        </div>
+        <div class="proj-card reveal d2">
+          <div class="proj-num">Project 03</div>
+          <h3 class="proj-title">Employee Management System</h3>
+          <p class="proj-desc">SQL-backed database system with full CRUD operations for managing employee records, departments, and payroll reporting.</p>
+          <div class="proj-tags">
+            <span class="p-tag">SQL</span>
+            <span class="p-tag">Python</span>
+            <span class="p-tag">DBMS</span>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section-pad section-alt">
-      <div class="container">
-        <div class="section-label">04 — Contact</div>
-        <h2 class="section-title text-center mb-2">Let's Connect</h2>
-        <p class="text-center mb-5 contact-sub">
-          Feel free to reach out to me via email for opportunities or collaboration.
-        </p>
-        <div class="text-center">
-          <a href="mailto:your-email@example.com" class="btn-primary-custom">Email Me ✉️</a>
+  <!-- Internships -->
+  <section id="internships">
+    <div class="container">
+      <div class="sec-chip">04 &mdash; Experience</div>
+      <h2 class="sec-title">Internships &amp; <em>Training</em></h2>
+      <div class="intern-grid">
+        <div class="intern-card reveal">
+          <div class="intern-dot">D</div>
+          <h3 class="intern-org">Deloitte</h3>
+          <span class="intern-role">Technology &amp; Data Analytics &mdash; Virtual Simulation</span>
+          <p class="intern-desc">Completed a structured simulation of real consulting workflows in data analytics and technology. Gained exposure to Deloitte's problem-solving frameworks and analytical tools used in practice.</p>
+        </div>
+        <div class="intern-card reveal d1">
+          <div class="intern-dot">A</div>
+          <h3 class="intern-org">AICTE Virtual Internship</h3>
+          <span class="intern-role">Artificial Intelligence &amp; Machine Learning</span>
+          <p class="intern-desc">Completed an AICTE-certified internship covering AI and ML fundamentals, supervised learning, model evaluation, and real-world intelligent system case studies.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container text-center">
-        <p class="footer-name">Priyanka Kale</p>
-        <p class="footer-copy">© 2026 · All Rights Reserved</p>
+  <!-- Activities -->
+  <section id="activities" class="section-alt">
+    <div class="container">
+      <div class="sec-chip">05 &mdash; Activities</div>
+      <h2 class="sec-title">Beyond <em>the classroom</em></h2>
+      <div class="act-grid">
+        <div class="act-card reveal">
+          <div class="act-icon rose">&#9733;</div>
+          <div>
+            <div class="act-label">Hackathon</div>
+            <div class="act-title">Smart India Hackathon (SIH)</div>
+            <div class="act-sub">Participated in India's largest student hackathon, collaborating on real-world problem statements for government and industry.</div>
+          </div>
+        </div>
+        <div class="act-card reveal d1">
+          <div class="act-icon sage">&#9830;</div>
+          <div>
+            <div class="act-label">Leadership</div>
+            <div class="act-title">Event Coordinator &mdash; URJA Fest</div>
+            <div class="act-sub">Managed and coordinated events at the college technical fest, overseeing logistics, schedules, and participant experience.</div>
+          </div>
+        </div>
+        <div class="act-card reveal d2">
+          <div class="act-icon butter">&#9672;</div>
+          <div>
+            <div class="act-label">Membership</div>
+            <div class="act-title">CSESA Student Association</div>
+            <div class="act-sub">Active member contributing to tech events, peer learning workshops, and initiatives run by the CS Engineering department.</div>
+          </div>
+        </div>
+        <div class="act-card reveal d3">
+          <div class="act-icon sky">&#9827;</div>
+          <div>
+            <div class="act-label">Sports</div>
+            <div class="act-title">College Cricket Tournament Winner</div>
+            <div class="act-sub">Won the college-level cricket tournament, demonstrating teamwork, discipline, and performance under pressure.</div>
+          </div>
+        </div>
       </div>
-    </footer>
+    </div>
+  </section>
 
-    
-    <script src="https://priyankakale157-creator.github.io/Priyankakale-portfolio/script.js"></script>
-  </body>
+  <!-- Soft Skills -->
+  <section id="softskills">
+    <div class="container">
+      <div class="sec-chip">06 &mdash; Soft Skills</div>
+      <h2 class="sec-title">How I <em>work with people</em></h2>
+      <div class="soft-grid reveal">
+        <div class="soft-card">
+          <div class="soft-icon" style="background:var(--rose);">&#9733;</div>
+          <div class="soft-name">Leadership</div>
+          <div class="soft-desc">Taking initiative and guiding teams toward a shared goal</div>
+        </div>
+        <div class="soft-card">
+          <div class="soft-icon" style="background:var(--sage);">&#9829;</div>
+          <div class="soft-name">Teamwork</div>
+          <div class="soft-desc">Collaborating effectively and lifting people around me</div>
+        </div>
+        <div class="soft-card">
+          <div class="soft-icon" style="background:var(--butter);">&#9679;</div>
+          <div class="soft-name">Time Management</div>
+          <div class="soft-desc">Staying organised and delivering consistently on time</div>
+        </div>
+        <div class="soft-card">
+          <div class="soft-icon" style="background:var(--sky);">&#9670;</div>
+          <div class="soft-name">Coordination</div>
+          <div class="soft-desc">Keeping moving parts aligned across events and projects</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <span class="blob blob-c1"></span>
+    <span class="blob blob-c2"></span>
+    <div class="container contact-inner">
+      <div class="sec-chip" style="display:inline-flex;margin-bottom:16px;">07 &mdash; Contact</div>
+      <h2 class="contact-big reveal">Let's build something<br><em>great together.</em></h2>
+      <p class="contact-sub reveal d1">Actively looking for software development opportunities. Whether you have a role, a project, or just want to connect, I would love to hear from you.</p>
+      <div class="reveal d2">
+        <a href="mailto:priyankakale157@gmail.com" class="contact-mail">priyankakale157@gmail.com</a>
+      </div>
+      <div class="reveal d3">
+        <a href="mailto:priyankakale157@gmail.com" class="btn-filled">Send a Message</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <span class="footer-brand">Priyanka Kale</span>
+    <span class="footer-copy">&copy; 2026 &nbsp;&middot;&nbsp; All rights reserved</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
