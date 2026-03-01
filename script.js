@@ -1,47 +1,44 @@
-// ===================================
-// script.js
-// ===================================
+// =====================
+// Dark Mode Toggle
+// =====================
+const themeBtn = document.getElementById('theme-btn');
 
-// Wait for DOM to load
-document.addEventListener("DOMContentLoaded", () => {
-  // 1️⃣ Skill Bar Animation
-  const skills = document.querySelectorAll(".skill-fill");
+if (localStorage.getItem('theme') === 'dark') {
+  document.body.classList.add('dark');
+  themeBtn.innerHTML = '&#9728;';
+}
 
-  const animateSkills = () => {
-    const triggerPoint = window.innerHeight * 0.85;
+themeBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  const dark = document.body.classList.contains('dark');
+  localStorage.setItem('theme', dark ? 'dark' : 'light');
+  themeBtn.innerHTML = dark ? '&#9728;' : '&#9790;';
+});
 
-    skills.forEach(skill => {
-      const skillTop = skill.getBoundingClientRect().top;
-      if (skillTop < triggerPoint) {
-        const width = skill.getAttribute("data-width");
-        skill.style.width = width + "%";
-      }
-    });
-  };
+// =====================
+// Scroll Reveal
+// =====================
+const reveals = document.querySelectorAll('.reveal');
 
-  window.addEventListener("scroll", animateSkills);
-  animateSkills(); // Trigger on load in case already in view
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
 
-  // 2️⃣ Dark/Light Mode Toggle
-  const toggleBtn = document.getElementById("theme-toggle");
-  const body = document.body;
+reveals.forEach(el => revealObserver.observe(el));
 
-  // Load saved mode from localStorage
-  if (localStorage.getItem("theme") === "dark") {
-    body.classList.add("dark-mode");
-    toggleBtn.textContent = "☀️";
-  } else {
-    toggleBtn.textContent = "🌙";
-  }
+// =====================
+// Skill Bar Animation
+// =====================
+const skillBars = document.querySelectorAll('.sk-fill');
 
-  toggleBtn.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
-    if (body.classList.contains("dark-mode")) {
-      localStorage.setItem("theme", "dark");
-      toggleBtn.textContent = "☀️";
-    } else {
-      localStorage.setItem("theme", "light");
-      toggleBtn.textContent = "🌙";
+const skillObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.width = entry.target.getAttribute('data-width') + '%';
     }
   });
-});
+}, { threshold: 0.3 });
+
+skillBars.forEach(bar => skillObserver.observe(bar));
